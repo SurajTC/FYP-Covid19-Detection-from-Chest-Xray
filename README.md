@@ -1,1 +1,1 @@
-# FYP-Covid19-Detection-from-Chest-Xray
+# Covid-19 Detection form Chest X-Ray using Machine Learning
