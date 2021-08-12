@@ -1,0 +1,25 @@
+
+footer{
+    
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: flex-end;
+    bottom: 0;
+    background-color: $clr_bg_d;
+
+    span{
+        margin: .25rem .5rem;
+    }
+
+    &::before{
+        position: absolute;
+        content: '';
+        top: -.125rem;
+        left: 0;
+        right: 0;
+        height: 0.125rem;
+        background: $clr_grad50;
+    }
+}

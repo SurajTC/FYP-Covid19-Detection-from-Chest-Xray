@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Home</title>
+{%endblock%}
+
+{% block header %}
+<header>
+  <nav class="navbar">
+    <section class="navbar__left">
+      <a id="home" href="/user/home" class="navbar__left__item">
+        <div class="icon">
+          <i class="ri-home-line icon__line"></i>
+          <i class="ri-home-fill icon__fill"></i>
+        </div>
+        <span>Home</span>
+      </a>
+      <a id="explore" href="/user/explore" class="navbar__left__item">
+        <div class="icon">
+          <i class="ri-folder-2-line icon__line"></i>
+          <i class="ri-folder-2-fill icon__fill"></i>
+        </div>
+        <span>Explore</span>
+      </a>
+    </section>
+
+    <section class="navbar__right">
+      <a id="dashboard" href="/user/dashboard" class="navbar__right__item">
+        <div class="icon">
+          <i class="ri-settings-line icon__line"></i>
+          <i class="ri-settings-fill icon__fill"></i>
+        </div>
+      </a>
+      <a href="#" class="navbar__right__item">
+        <div id="message" class="icon">
+          <i class="ri-notification-line icon__line"></i>
+          <i class="ri-notification-fill icon__fill"></i>
+        </div>
+      </a>
+      <a href="/logout" class="navbar__right__item">
+        <div class="icon">
+          <i class="ri-shut-down-line icon__line"></i>
+          <i class="ri-shut-down-fill icon__fill"></i>
+        </div>
+      </a>
+    </section>
+  </nav>
+</header>
+{% endblock %}
+
+
+{% block main %}
+  <main class="homeLayout">
+    <section id="page1" class="homeLayout__page">
+        <div class="homeLayout__page__contents page1-contents">
+          <h1>Coronavirus (COVID-19)</h1>
+          <p>Coronavirus disease (COVID-19) is an infectious disease caused by a
+            newly discovered coronavirus.</p>
+          <p>
+            Most people infected with the COVID-19
+            virus will experience mild to moderate respiratory illness and
+            recover without requiring special treatment. Older people, and those
+            with underlying medical problems like cardiovascular disease,
+            diabetes, chronic respiratory disease, and cancer are more likely to
+            develop serious illness.
+          </p>
+          <p>
+            The best way to prevent and slow down
+            transmission is to be well informed about the COVID-19 virus, the
+            disease it causes and how it spreads. Protect yourself and others
+            from infection by washing your hands or using an alcohol based rub
+            frequently and not touching your face.
+          </p>
+
+          <p>
+            The COVID-19 virus spreads
+            primarily through droplets of saliva or discharge from the nose when
+            an infected person coughs or sneezes, so it’s important that you
+            also practice respiratory etiquette (for example, by coughing into a
+            flexed elbow)
+          </p>
+          
+          <table>
+            <tr>
+              <td><span class="material-icons">wash</span></td>
+              <td><span class="material-icons">masks</span></td>
+              <td><span class="material-icons">social_distance</span></td>
+            </tr>
+
+          <tr>
+            <td>Stay Hygiene</td>
+            <td>Wear Masks</td>
+            <td>Social Distancing</td>
+          </tr>
+        </table>
+        <h1>Statistics - India</h1>
+          <div id="statistics" class="statistics">
+            
+            <div class="statistics__group">
+              <div class="statistics__group__card">
+                <h6 class="head">Total Cases</h6>
+                <p class="number"></p>
+              </div>
+
+              <div class="statistics__group__card">
+                <h6 class="head">Recovered</h6>
+                <p class="number"></p>
+              </div>
+            </div>
+            <div class="statistics__group">
+              <div class="statistics__group__card">
+                <h6 class="head">Total Deaths</h6>
+                <p class="number"></p>
+              </div>
+
+              <div class="statistics__group__card">
+                <h6 class="head">Closed Cases</h6>
+                <p class="number"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="homeLayout__page__graphics">
+          <div class="hero">
+            <img class="hero__bg" src="{{ url_for('static', filename='resources/Hero/covid_bg.svg')}}" alt="aa" />
+            <img class="hero__fg" src="{{ url_for('static', filename='resources/Hero/covid_fg.svg')}}" alt="aa" />
+          </div>
+        </div>
+      </section>
+      <section id="page2" class="homeLayout__page">
+        <div class="homeLayout__page__graphics">
+          <div class="hero">
+            <img class="hero__bg" src="{{ url_for('static', filename='resources/Hero/work_bg.svg')}}" alt="aa" />
+            <img class="hero__fg" src="{{ url_for('static', filename='resources/Hero/work_fg.svg')}}" alt="aa" />
+          </div>
+        </div>
+        <div class="homeLayout__page__contents page2-contents">
+          <h1>About the Project</h1>
+          <ul>
+            <li>
+              The sudden spike in the number of patients with COVID-19, a new
+              respiratory virus, has put unprecedented load over healthcare
+              systems across the world.
+            </li>
+            <li>
+              The early and automatic diagnosis of Covid-19 may be beneficial
+              for countries for timely referral of the patients to quarantine,
+              rapid intubation of serious cases in specialized hospitals, and
+              monitoring of the spread of the disease.
+            </li>
+          </ul>
+          <p>
+            We propose the use of Chest X-Ray to detect COVID-19 infection in
+            the patients by identifying possible patterns that may lead to the
+            automatic diagnosis of the disease.
+          </p>
+          <p>
+            Developing a Computer Aided Detection (CAD) tool which uses a deep
+            neural network based model for highly accurate detection of COVID-19
+            infection from the chest X-Ray images of the patients.
+          </p>
+          <p>
+            It takes a chest X-Ray Image as input and outputs a prediction among
+            two classes:
+            <ul>
+              <li>Normal/COVID-19 negative</li>
+              <li>COVID-19 Positive </li>
+            </ul>
+          </p>
+
+          <div class="btn-grp">
+            <p>Click Here for Demonstration</p>
+            <a href="/user/explore"><input class="btn green" type="button" value="Explore" style="width: 20rem;">
+            </a>
+            </div>
+        </div>
+      </section>
+      <section id="page3" class="homeLayout__page">
+        <div class="homeLayout__page__contents"></div>
+        <div class="homeLayout__page__graphics">
+          <div class="hero">
+            <img class="hero__bg" src="{{ url_for('static', filename='resources/Hero/relax_bg.svg') }}" alt="aa" />
+            <img class="hero__fg" src="{{ url_for('static', filename='resources/Hero/relax_fg.svg') }}" alt="aa" />
+          </div>
+        </div>
+      </section>
+  </main>
+{% endblock %}

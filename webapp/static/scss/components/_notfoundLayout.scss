@@ -1,0 +1,94 @@
+@import "variables/colorScheme";
+@import "elements/button";
+
+.notFoundLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $clr_bg_d;
+  align-items: center;
+  padding-top: 20vh;
+  z-index: -2;
+  position: relative;
+
+  .stars {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    mix-blend-mode: difference;
+
+    // animation: rotation 500s linear infinite;
+    // @keyframes rotation {
+    //   from {
+    //     transform: rotate(0deg);
+    //   }
+    //   to {
+    //     transform: rotate(360deg);
+    //   }
+    // }
+  }
+
+  & h1 {
+    font-size: 10rem;
+    color: $clr_bg_l;
+    opacity: 0.5;
+    position: absolute;
+    top: 12vh;
+  }
+  & h2 {
+    font-size: 4.5rem;
+    color: $clr_bg_l;
+    opacity: 0.5;
+    position: absolute;
+    top: 54vh;
+    z-index: -1;
+  }
+
+  &__img {
+    position: relative;
+    height: 400px;
+    width: 400px;
+
+    animation: displace 15s ease-in-out infinite;
+
+    @keyframes displace {
+      0% {
+        transform: translate(0%, 0%);
+      }
+      25% {
+        transform: translate(-2%, 0%);
+      }
+      50% {
+        transform: translate(2%, 2%);
+      }
+      75% {
+        transform: translate(0%, -1.5%);
+      }
+      100% {
+        transform: translate(0%, 0%);
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 135%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(4px, 4px, 6px, #000);
+    }
+  }
+
+}
+.goback{
+position: absolute;
+display: flex;
+justify-content: center;
+width: 100vw;
+bottom: 15rem;
+  .btn{
+    width: 15rem;
+  }
+}

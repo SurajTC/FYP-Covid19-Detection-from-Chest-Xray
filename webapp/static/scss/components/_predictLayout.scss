@@ -1,0 +1,170 @@
+@import "variables/colorScheme";
+@import "elements/button";
+@import "elements/textbox";
+
+.predictLayout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+
+  // & div:nth-child(n) {
+  //   margin: 2rem;
+  // }
+  h2{
+    text-align: center;
+    width: 80vw;
+    padding: 3rem 0;
+  }
+  &__predict {
+    padding: 0 1rem;
+    .img-wrap {
+      position: relative;
+      width: 28rem;
+      height: 30rem;
+      border-radius: .75rem;
+      margin-bottom: 2rem;
+      border: 3px solid $clr_fg_d;
+      background-color: $clr_bg_l;
+      overflow: hidden;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+    img {
+      position: relative;
+      width: 28rem;
+      height: 30rem;
+      border-radius: .75rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+    .upload-wrap {
+      position: relative;
+
+      width: 28rem;
+      height: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      // input[type="file"]{
+      //   position: absolute;
+      //   left: 0;
+      //   z-index: -1;
+      // }
+      // label{
+      //   position: relative;
+      // }
+      .btn{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 35%;
+      }
+
+      .file-btn {
+        font-size: 1.25rem;
+
+        &::-webkit-file-upload-button {
+          position: absolute;
+          cursor: pointer;
+          bottom: 0;
+          left: 0;
+          transition: filter 400ms ease-in-out, color 400ms ease-in,
+            border 400ms ease-in, background-color 400ms ease-in,
+            transform 50ms ease-out;
+
+          width: 60%;
+          margin-right: 2rem;
+          font-size: 1.25rem;
+          border-style: none;
+          background-color: transparent;
+          color: $clr_fg_l;
+          border: 2px solid;
+          border-color: $clr_fg_d;
+          padding: 0.5rem 0;
+          border-radius: 0.4rem;
+
+          &:hover {
+            transition: filter 50ms ease-in-out, color 50ms ease-in,
+              border 400ms ease-in;
+
+            color: $clr_hl;
+            border-color: $clr_hl;
+
+            background-color: $clr_bg_l;
+            filter: drop-shadow(2px 2px 4px rgba($color: #000, $alpha: 0.5));
+          }
+          &:active {
+            transition: filter 50ms ease-out, transform 50ms ease-out,
+              background-color 50ms ease-out;
+
+            background-color: $clr_bg_d;
+            transform: scale(0.95);
+            filter: drop-shadow(2px 2px 2px rgba($color: #000, $alpha: 0.5));
+          }
+        }
+      }
+    }
+  }
+
+  &__save{
+    width: 28rem;
+    padding: 0 1rem;
+
+    font-size: 1.25rem;
+
+    .predResult{
+      color: $clr_ex1;
+
+      animation: blink 2000ms ease-in-out  infinite;
+      @keyframes blink {
+        from{
+          opacity: 1;
+        }
+        25%{
+          opacity: 1;
+        }
+        50%{
+          opacity: .05;
+        }
+        to{
+          opacity: 1;
+        }
+        
+      }
+    }
+    h3{
+      text-align: center;
+    }
+
+    textarea{
+      position: relative;
+      margin: 0;
+      width: 100%;
+    }
+
+    & *{
+      margin: 1.5rem 0 0 0;
+    }
+
+    .save-grp{
+
+
+
+      & .textbox{
+        width: 60%;
+      }
+      & .email{
+        width: 100%;
+      }
+
+      & .btn{
+        width: 35%;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+$clr_black: #000000;
+$clr_white: #ffffff;
+
+$clr_bg_d: #212529;
+$clr_bg_l: #343a40;
+$clr_fg_d: #495057;
+$clr_fg_l: #6c757d;
+
+$clr_ac: #00f5d4;
+$clr_hl: #00bbf9;
+
+$clr_ex1: #e56b6f;
+
+$clr_grad50: linear-gradient(90deg, $clr_hl, $clr_ac);
+
+body {
+  color: $clr_fg_l;
+  background-color: $clr_bg_d;
+}

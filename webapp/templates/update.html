@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Predict</title>
+{%endblock%}
+
+{% block main %}
+  <main class="predictLayout">
+    <h2>COVID-19 PREDICTION FROM CHEST X-RAY IMAGE</h2>
+    <div class="predictLayout__predict">
+    
+      <form enctype="multipart/form-data" onsubmit="sendFile(); return false;" method="POST">
+          <div class="img-wrap">
+            <img
+              class="image-layout"
+              id="show"
+              src="{{ url_for('static', filename='data/images/'+data.imageurl) }}"
+              alt="Please Upload an Image"
+            />
+          </div>
+
+          <div class="upload-wrap">
+            <input
+              type="file"
+              class="file-btn"
+              id="upload"
+              name="input-image"
+              onchange="document.getElementById('show').src = window.URL.createObjectURL(this.files[0])"
+              required
+            />
+
+            <input
+            class="btn green"
+            type="submit"
+            value="Predict"
+          />
+          </div>
+
+
+      </form>
+    </div>
+    <div class="predictLayout__save">
+
+      <form action="/save" method="POST">
+        <h3>Estimated Results</h3>
+        <p>Chance of being Positive : <span id="span1">{{data.covid}}</span></p>
+        <p>Chance of being Negative : <span id="span2">{{data.normal}}</span></p>
+        <p>Prediction: <span id="span3">{{data.result}}</span></p>
+        
+            
+        <p>Add Comment</p>
+        <textarea class="textbox" name="comment-box" id="textbox"  rows="3" onkeyup="updateCharCount(this.value)">{{data.comments}}</textarea>
+        <div>
+        <span id="charcount">0</span>
+        
+        <span>/ 250</span>
+        <p>Save Result by clicking Save</p>
+        <div class="save-grp">
+          <input class="textbox email" name="email-id" type="text" placeholder="Enter Patient's email address" >
+          <input class="textbox" name="patient-id" type="text" placeholder="Enter Patient ID" value="{{data.patient}}" required disabled>
+          <input id="saveBtn" class="btn green" type="submit" value="save result">
+        </div>  </form>
+    </div>
+  </main>
+{% endblock %}

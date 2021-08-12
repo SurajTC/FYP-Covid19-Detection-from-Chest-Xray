@@ -1,0 +1,106 @@
+@import "variables/colorScheme";
+
+.messages {
+  display: none;
+  position: absolute;
+  background-color: $clr_bg_l;
+  z-index: 2;
+  max-height: 60vh;
+  width: 20rem;
+  right: 0;
+  border-radius: 0.5rem;
+  overflow-y: scroll;
+  margin: 0.5rem 2.5rem 0 0;
+  padding: 0.5rem;
+  filter: drop-shadow(4px 4px 6px rgba(#000, 0.5));
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.5rem;
+    background-color: $clr_bg_l;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    border: 2px solid $clr_bg_l;
+    background: $clr_bg_d;
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: $clr_bg_d;
+    cursor: default;
+    line-height: 1.25rem;
+
+    h3 {
+      display: inline;
+      line-height: 2rem;
+      font-size: 1.5rem;
+      min-width: 16ch;
+    }
+    i {
+      font-size: 1.75rem;
+
+      &:hover {
+        cursor: pointer;
+        color: $clr_ex1;
+      }
+    }
+    span{
+      font-size: 0.8rem;
+    }
+    p{
+      flex-basis: 100%;
+      font-size: 1.25rem;
+    }
+    p::first-letter {
+      margin-left: 1.5rem;
+    }
+
+    &:hover {
+      filter: drop-shadow(2px 2px 4px rgba(#000, 0.5));
+
+      border-color: $clr_hl;
+
+      h3 {
+        color: $clr_hl;
+      }
+
+      p {
+        color: lighten($color: $clr_fg_l, $amount: 20%);
+      }
+      &:nth-of-type(even) {
+        border-color: $clr_ac;
+        h3 {
+          color: $clr_ac;
+        }
+      }
+    }
+  }
+  h4{
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: normal;
+  }
+}
+.icon-active {
+  .icon__line {
+    opacity: 0;
+  }
+  .icon__fill {
+    opacity: 1;
+  }
+}
+.show {
+  display: initial;
+}

@@ -1,0 +1,30 @@
+@media screen and (max-width: 1160px) {
+  body {
+    // text-align: justify;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .homeLayout {
+    &__page {
+      flex-direction: column-reverse;
+
+      &__graphics {
+        .hero {
+          padding-top: 0;
+
+          &__icons {
+            right: 0;
+            span {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+    #page2 {
+      flex-direction: column;
+    }
+  }
+}

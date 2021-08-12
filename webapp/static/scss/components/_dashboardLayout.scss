@@ -1,0 +1,51 @@
+@import "variables/colorScheme";
+
+@import "elements/button";
+@import "elements/textbox";
+
+.dashboardLayout{
+  font-size: 1.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  margin: 2rem;
+
+  &__info{
+    text-align: left;
+
+    h2{
+      display: inline-block;
+      background: $clr_grad50;
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    *{
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__actions{
+    display: flex;
+    flex-flow: row wrap;
+
+    gap: 2rem;
+
+    div, .textbox{
+      width: 28rem;
+      margin: .5rem 0;
+    }
+    .btn{
+      width: 12rem;
+      margin: .5rem 0;
+    }
+
+    h3, h4{
+      padding: .5rem 0;
+    }
+    span{
+      float: right;
+    }
+  }
+}

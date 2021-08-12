@@ -1,0 +1,115 @@
+@import "variables/colorScheme";
+@import "elements/button";
+@import "elements/textbox";
+
+.loginLayout {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 10rem;
+  gap: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p{
+    color: $clr_ex1;
+    font-size: 1.25rem;
+    animation: blink 2000ms ease-in-out  infinite;
+    @keyframes blink {
+      from{
+        opacity: 1;
+      }
+      25%{
+        opacity: 1;
+      }
+      50%{
+        opacity: .05;
+      }
+      to{
+        opacity: 1;
+      }
+      
+    }
+  }
+.loginhead{
+  position: fixed;
+  top: -5rem;
+  width: 100%;
+  h2{
+    display: inline-block;
+    text-align: left;
+    font-size: 2.5rem;
+
+    background: $clr_grad50;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  h3{
+    i{
+      font-size: 1.5rem;
+    }
+    color: $clr_fg_l;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: normal;
+    margin: .65rem 1rem 0 0;
+  }
+}
+
+  .form{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    &__login,
+  &__signup {
+    position: relative;
+    width: 22rem;
+    height: 28rem;
+    border-radius: .75rem;
+    border: 2px solid $clr_fg_l;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+
+    a{
+      display: block;
+      margin: .5rem 5%;
+    }
+
+    span{
+      font-size: 1.5rem;
+      padding: 1rem 5% 0 5%;
+    }
+    p{
+      text-align: center;
+      margin: .5rem 5%;
+    }
+    input {
+      margin: .5rem 5%;
+      width: 90%;
+    }
+    .chin{
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      margin-bottom: 1.5rem;
+    }
+
+
+  }
+
+  &__login:hover{
+    border-color: $clr_hl;
+
+  }
+  &__signup:hover{
+    border-color: $clr_ac;
+  }
+  }
+}

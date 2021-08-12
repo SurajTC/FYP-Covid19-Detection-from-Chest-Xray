@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Manage</title>
+{%endblock%}
+
+{% block main %}
+  <main class="manageLayout">
+    <div class="manageLayout__request">
+      <h2>Requests</h2>
+      <div class="container">
+        {% for request in requests %}
+        <form class="container__card" action="/manage/add/{{request.id}}" method="POST">
+          <h4>{{request.username}}</h4>
+          <input type="checkbox" name="admin" id="admin{{request.id}}" />
+          <label for="admin{{request.id}}">admin</label>
+          <div class="btn-grp">
+            <input class="btn green" type="submit" value="Approve" />
+            <br>
+            <a href="/manage/deny/{{request.id}}"><input class="btn blue" type="button" value="Deny" /></a>
+          </div>
+        </form>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="manageLayout__user">
+      <h2>Active Users</h2>
+      <div class="container">
+        {% for user in users %}
+        <form class="container__user" action="/manage/update/{{user.id}}" method="POST">
+          <div>
+            <h4>{{user.username}}</h4>
+            <p>{{ user.lastactive.strftime("%d %b %Y, %H:%M:%S") }}</p>
+          </div>
+          <div>
+            <input type="radio" name="role" id="isAdimin{{user.superuser}}" value="1" 
+            {% if user.superuser %} 
+            checked 
+            {% endif %}
+            >
+            <label for="isAdimin{{user.superuser}}">Admin</label><br>
+            <input type="radio" name="role" id="isUser{{user.superuser}}" value="0"
+            {% if not user.superuser %} 
+            checked 
+            {% endif %}
+            >
+            <label for="isUser{{user.superuser}}">User</label>
+          </div> 
+          
+          <div>
+            <input class="btn green" type="submit" value="update"><br>
+            <a href="/manage/remove/{{user.id}}"><input class="btn blue" type="button" value="remove"></a>
+          </div>
+        </form>
+        {% endfor %}
+      </div>
+
+    </div>
+  </main>
+{% endblock %}

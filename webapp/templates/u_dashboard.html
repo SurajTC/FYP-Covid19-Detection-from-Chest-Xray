@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Dashboard</title>
+{%endblock%}
+
+{% block header %}
+<header>
+  <nav class="navbar">
+    <section class="navbar__left">
+      <a id="home" href="/user/home" class="navbar__left__item">
+        <div class="icon">
+          <i class="ri-home-line icon__line"></i>
+          <i class="ri-home-fill icon__fill"></i>
+        </div>
+        <span>Home</span>
+      </a>
+      <a id="explore" href="/user/explore" class="navbar__left__item">
+        <div class="icon">
+          <i class="ri-folder-2-line icon__line"></i>
+          <i class="ri-folder-2-fill icon__fill"></i>
+        </div>
+        <span>Explore</span>
+      </a>
+    </section>
+
+    <section class="navbar__right">
+      <a id="dashboard" href="/user/dashboard" class="navbar__right__item">
+        <div class="icon">
+          <i class="ri-settings-line icon__line"></i>
+          <i class="ri-settings-fill icon__fill"></i>
+        </div>
+      </a>
+      <a href="#" class="navbar__right__item">
+        <div id="message" class="icon">
+          <i class="ri-notification-line icon__line"></i>
+          <i class="ri-notification-fill icon__fill"></i>
+        </div>
+      </a>
+      <a href="/logout" class="navbar__right__item">
+        <div class="icon">
+          <i class="ri-shut-down-line icon__line"></i>
+          <i class="ri-shut-down-fill icon__fill"></i>
+        </div>
+      </a>
+    </section>
+  </nav>
+</header>
+{% endblock %}
+
+{% block main %}
+  <main class="dashboardLayout">
+    <div class="dashboardLayout__info">
+      <h2>{{user.username}}</h2>
+      {% if user.superuser %}
+      <p>Administrator</p>
+      {% else %}
+      <p>Staff</p>
+      {% endif %}
+      <p>{{ user.lastactive.strftime("%d %b %Y, %H:%M:%S") }}</p>
+    </div>
+
+    <div class="dashboardLayout__actions">
+      <div>
+        <h3>Post Message</h3>
+        <textarea id="postContents" name="message" rows="3" class="textbox" placeholder="Write something" onkeyup="updateCharCount(this.value)"></textarea><br>
+        <span>/150</span><span id="charcount">0</span><br>
+
+        <a href="javascript:postMessage({{user.id}})"><input class="btn blue" type="button" value="Post"></a>
+      </div>
+      <div>
+        <h3>Update Password</h3>
+
+        <input type="password" name="oldpassword" id="oldpassword" class="textbox" placeholder="Enter old password"><br>
+        <input type="password" name="nwpassword" id="nwpassword" class="textbox" placeholder="Enter new password"><br>
+        <input type="password" name="repassword" id="repassword" class="textbox" placeholder="Re-enter new password">
+
+        <a href="javascript:updatePassword()"><input class="btn blue" type="button" value="Update"></a>
+
+      </div>
+    </div>
+  </main>
+{% endblock %}

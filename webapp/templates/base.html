@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block title %}
+    <title>Base</title>
+    {% endblock %}
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='resources/RemixIcons/remixicon.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='resources/favicon.ico') }}">
+
+  </head>
+  <body>
+    <!-- HEADER/TOP NAVBAR -->
+
+    {% block header %}
+    <header>
+      <nav class="navbar">
+        <section class="navbar__left">
+          <a id="home" href="/admin/home" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-home-line icon__line"></i>
+              <i class="ri-home-fill icon__fill"></i>
+            </div>
+            <span>Home</span>
+          </a>
+          <a id="explore" href="/admin/explore" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-folder-2-line icon__line"></i>
+              <i class="ri-folder-2-fill icon__fill"></i>
+            </div>
+            <span>Explore</span>
+          </a>
+          <a id="predict" href="/admin/predict" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-flask-line icon__line"></i>
+              <i class="ri-flask-fill icon__fill"></i>
+            </div>
+            <span>Predict</span>
+          </a>
+          <a id="manage" href="/admin/manage" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-shield-user-line icon__line"></i>
+              <i class="ri-shield-user-fill icon__fill"></i>
+            </div>
+            <span>Manage</span>
+          </a>
+        </section>
+
+        <section class="navbar__right">
+          <a id="dashboard" href="/admin/dashboard" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-settings-line icon__line"></i>
+              <i class="ri-settings-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="#" class="navbar__right__item">
+            <div id="message" class="icon">
+              <i class="ri-notification-line icon__line"></i>
+              <i class="ri-notification-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="/logout" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-shut-down-line icon__line"></i>
+              <i class="ri-shut-down-fill icon__fill"></i>
+            </div>
+          </a>
+        </section>
+      </nav>
+    </header>
+    {% endblock %}
+
+    <!-- Messages -->
+    {% block notification%}
+
+    <div id="messages" class="messages">
+      {% for item in msgObj%}
+      <div class="messages__item">
+        <h3>{{item.username}}</h3>
+        {% if item.id == user.id %}
+        <a href="javascript:postDelete({{user.id}})"><i class="ri-close-fill"></i></a>
+        {% endif %}
+        
+        <span>{{item.messagedate.strftime("%d %b %Y, %H:%M")}}</span>
+        <p>
+          {{ item.message }}
+        </p>
+      </div>
+      {% endfor %}
+    
+      <h4>No more Messages to display</h4>
+    
+    </div>
+
+    {% endblock %}
+
+    <!-- Main Page Contents  -->
+
+    {% block main %}
+    {% endblock %}
+
+    <!-- Footer Contents -->
+    <footer>
+      <span>Batch-5 Project</span>
+      <span>&copy; Copyright 2021</span>
+      <span>Maharaja Institute of Technology Mysore</span>
+    </footer>
+
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>
