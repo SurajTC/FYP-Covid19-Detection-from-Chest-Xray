@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Explore</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/resources/RemixIcons/remixicon.css" />
+    <link rel="stylesheet" href="static/css/main.min.css" />
+    <link rel="shortcut icon" href="static/resources/favicon.ico">
+
+  </head>
+  <body style="width: 100vw; height: 100vh; overflow-x: hidden">
+    <!-- HEADER/TOP NAVBAR -->
+
+    <header>
+      <nav class="navbar">
+        <section class="navbar__left">
+          <a id="home" href="home.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-home-line icon__line"></i>
+              <i class="ri-home-fill icon__fill"></i>
+            </div>
+            <span>Home</span>
+          </a>
+          <a id="explore" href="explore.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-folder-2-line icon__line"></i>
+              <i class="ri-folder-2-fill icon__fill"></i>
+            </div>
+            <span>Explore</span>
+          </a>
+          <a id="predict" href="predict.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-flask-line icon__line"></i>
+              <i class="ri-flask-fill icon__fill"></i>
+            </div>
+            <span>Predict</span>
+          </a>
+          <a id="manage" href="manage.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-shield-user-line icon__line"></i>
+              <i class="ri-shield-user-fill icon__fill"></i>
+            </div>
+            <span>Manage</span>
+          </a>
+        </section>
+
+        <section class="navbar__right">
+          <a id="dashboard" href="dashboard.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-settings-line icon__line"></i>
+              <i class="ri-settings-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="#" class="navbar__right__item">
+            <div id="message" class="icon">
+              <i class="ri-notification-line icon__line"></i>
+              <i class="ri-notification-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="index.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-shut-down-line icon__line"></i>
+              <i class="ri-shut-down-fill icon__fill"></i>
+            </div>
+          </a>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Messages -->
+
+    <div id="messages" class="messages">
+      <div class="messages__item">
+        <h3>Root</h3>
+        <a href="#"><i class="ri-close-fill"></i></a>
+        
+        <span>12 June 2021, 09:05</span>
+        <p>
+          The Notification Message Appears Here
+        </p>
+      </div>
+
+      <div class="messages__item">
+        <h3>Guest User</h3>
+        <!-- <a href="javascript:postDelete({{user.id}})"><i class="ri-close-fill"></i></a> -->
+        
+        <span>27 May 2021, 18:32</span>
+        <p>
+          This is a Demo Message
+        </p>
+      </div>
+    
+      <h4>No more Messages to display</h4>
+    
+    </div>
+
+
+    <!-- Main Page Contents  -->
+    <main class="exploreLayout">
+      <div class="exploreLayout__sidebar">
+  
+        <div class="exploreLayout__sidebar__elem">
+          <h5>Covid-19</h5>
+          <h5>Positive</h5>
+          <p>05</p>
+        </div>
+        <div class="exploreLayout__sidebar__elem">
+          <h5>Covid-19</h5>
+          <h5>Negative</h5>
+          <p>07</p>
+        </div>
+  
+        <div class="exploreLayout__sidebar__elem">
+          <h5>Total Records</h5>
+          <p>12</p>
+        </div>
+      </div>
+      <div class="exploreLayout__main">
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Was a primary contact</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/COVID-01.png" alt="xray">
+  
+            <h4 class="patient-id">Patient #1111</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Positive</td></tr>
+              <tr><td>Probability</td>
+              <td>0.99 | 0.01</td></tr>
+              <tr><td>Date</td>
+              <td>15 June 2021, 14:24</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+  
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Had a Travel History</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/Normal-01.jpeg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1121</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Negative</td></tr>
+              <tr><td>Probability</td>
+              <td>0.05 | 1.00</td></tr>
+              <tr><td>Date</td>
+              <td>14 June 2021, 12:02</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Tested Positive</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/COVID-02.png" alt="xray">
+  
+            <h4 class="patient-id">Patient #1009</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Positive</td></tr>
+              <tr><td>Probability</td>
+              <td>0.93 | 0.10</td></tr>
+              <tr><td>Date</td>
+              <td>13 June 2021, 13:14</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Relative of Patient #1009</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/COVID-03.png" alt="xray">
+  
+            <h4 class="patient-id">Patient #1010</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Positive</td></tr>
+              <tr><td>Probability</td>
+              <td>0.83 | 0.21</td></tr>
+              <tr><td>Date</td>
+              <td>13 June 2021, 11:20</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Tested Negative</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/Normal-02.jpeg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1103</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Negative</td></tr>
+              <tr><td>Probability</td>
+              <td>0.05 | 0.90</td></tr>
+              <tr><td>Date</td>
+              <td>12 June 2021, 09:27</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Contact Tracing is Required</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/COVID-04.png" alt="xray">
+  
+            <h4 class="patient-id">Patient #1204</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Positive</td></tr>
+              <tr><td>Probability</td>
+              <td>0.98 | 0.11</td></tr>
+              <tr><td>Date</td>
+              <td>11 June 2021, 17:37</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Tested Negative</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/Normal-03.jpeg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1200</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Negative</td></tr>
+              <tr><td>Probability</td>
+              <td>0.03 | 0.78</td></tr>
+              <tr><td>Date</td>
+              <td>11 June 2021, 09:18</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Tested Negative</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/Normal-04.jpeg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1250</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Negative</td></tr>
+              <tr><td>Probability</td>
+              <td>0.13 | 0.88</td></tr>
+              <tr><td>Date</td>
+              <td>11 June 2021, 08:08</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Primary contact</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/COVID-05.jpg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1008</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Positive</td></tr>
+              <tr><td>Probability</td>
+              <td>0.97 | 0.11</td></tr>
+              <tr><td>Date</td>
+              <td>10 June 2021, 19:03</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Tested Negative</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/Normal-05.jpeg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1305</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Negative</td></tr>
+              <tr><td>Probability</td>
+              <td>0.15 | 0.86</td></tr>
+              <tr><td>Date</td>
+              <td>10 June 2021, 10:55</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Tested Negative</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/Normal-06.jpeg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1055</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Negative</td></tr>
+              <tr><td>Probability</td>
+              <td>0.25 | 0.96</td></tr>
+              <tr><td>Date</td>
+              <td>09 June 2021, 10:25</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        <div class="card">
+          <div class="card__comments" onclick="commentDrop(this)">
+            <p>Tested Negative</p>  
+          <div class="card__comments__btn">
+            <button><i id="arrow-btn" class="ri-arrow-down-s-line"></i></button>
+          </div>  
+          </div>
+          <div class="card__container">
+            <img src="static/resources/XrayImages/Normal-07.jpeg" alt="xray">
+  
+            <h4 class="patient-id">Patient #1143</h4>
+  
+            <table>
+              <th>
+                <td></td>
+                <td></td>
+              </th>
+              <tr><td>Result</td>
+              <td>Covid-19 Negative</td></tr>
+              <tr><td>Probability</td>
+              <td>0.05 | 0.92</td></tr>
+              <tr><td>Date</td>
+              <td>09 June 2021, 10:02</td></tr>
+            </table>
+  
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Update">
+              <input class="btn blue" type="button" value="Delete">
+            </div>
+            
+          </div>
+  
+        </div>
+
+        </div>
+  
+    </main>
+
+    <!-- Footer Contents -->
+    <footer>
+      <span>Covid-19 Detection form Chest X-Ray</span>
+      <span>&copy; Copyright 2021</span>
+      <span>Note : This is a Static Version of the App</span>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

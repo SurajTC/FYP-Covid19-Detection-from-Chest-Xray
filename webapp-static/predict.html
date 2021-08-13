@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Predict</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/resources/RemixIcons/remixicon.css" />
+    <link rel="stylesheet" href="static/css/main.min.css" />
+    <link rel="shortcut icon" href="static/resources/favicon.ico">
+
+  </head>
+  <body>
+    <!-- HEADER/TOP NAVBAR -->
+
+    <header>
+      <nav class="navbar">
+        <section class="navbar__left">
+          <a id="home" href="home.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-home-line icon__line"></i>
+              <i class="ri-home-fill icon__fill"></i>
+            </div>
+            <span>Home</span>
+          </a>
+          <a id="explore" href="explore.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-folder-2-line icon__line"></i>
+              <i class="ri-folder-2-fill icon__fill"></i>
+            </div>
+            <span>Explore</span>
+          </a>
+          <a id="predict" href="predict.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-flask-line icon__line"></i>
+              <i class="ri-flask-fill icon__fill"></i>
+            </div>
+            <span>Predict</span>
+          </a>
+          <a id="manage" href="manage.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-shield-user-line icon__line"></i>
+              <i class="ri-shield-user-fill icon__fill"></i>
+            </div>
+            <span>Manage</span>
+          </a>
+        </section>
+
+        <section class="navbar__right">
+          <a id="dashboard" href="dashboard.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-settings-line icon__line"></i>
+              <i class="ri-settings-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="#" class="navbar__right__item">
+            <div id="message" class="icon">
+              <i class="ri-notification-line icon__line"></i>
+              <i class="ri-notification-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="index.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-shut-down-line icon__line"></i>
+              <i class="ri-shut-down-fill icon__fill"></i>
+            </div>
+          </a>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Messages -->
+
+    <div id="messages" class="messages">
+      <div class="messages__item">
+        <h3>Root</h3>
+        <a href="#"><i class="ri-close-fill"></i></a>
+        
+        <span>12 June 2021, 09:05</span>
+        <p>
+          The Notification Message Appears Here
+        </p>
+      </div>
+
+      <div class="messages__item">
+        <h3>Guest User</h3>
+        <!-- <a href="javascript:postDelete({{user.id}})"><i class="ri-close-fill"></i></a> -->
+        
+        <span>27 May 2021, 18:32</span>
+        <p>
+          This is a Demo Message
+        </p>
+      </div>
+    
+      <h4>No more Messages to display</h4>
+    
+    </div>
+
+
+    <!-- Main Page Contents  -->
+    <main class="predictLayout">
+      <h2>COVID-19 PREDICTION FROM CHEST X-RAY IMAGE</h2>
+      <div class="predictLayout__predict">
+      
+        <form enctype="multipart/form-data" onsubmit="sendFile(); return false;" method="POST">
+            <div class="img-wrap">
+              <img
+                class="image-layout"
+                id="show"
+                alt="Please Upload an Image"
+              />
+            </div>
+  
+            <div class="upload-wrap">
+              <input
+                type="file"
+                class="file-btn"
+                id="upload"
+                name="input-image"
+                onchange="document.getElementById('show').src = window.URL.createObjectURL(this.files[0])"
+                required
+              />
+  
+              <input
+              class="btn green disabled"
+              type="submit"
+              value="Predict"
+              disabled
+            />
+            </div>
+  
+  
+        </form>
+      </div>
+      <div class="predictLayout__save">
+  
+        <form action="/save" method="POST">
+          <h3>Estimated Results</h3>
+          <p>Chance of being Positive : <span id="span1"></span></p>
+          <p>Chance of being Negative : <span id="span2"></span></p>
+          <p>Prediction: <span id="span3" class="predResult"></span></p>
+          
+              
+          <p>Add Comment</p>
+          <textarea class="textbox" name="comment-box" id="textbox"  rows="3" onkeyup="updateCharCount(this.value)"></textarea>
+          <div>
+          <span id="charcount">0</span>
+          
+          <span>/ 250</span>
+          <p>Save Result by clicking Save</p>
+          <div class="save-grp">
+            <input class="textbox email" name="email-id" type="text" placeholder="Enter Patient's email address" >
+            <input class="textbox" name="patient-id" type="text" placeholder="Enter Patient ID" required>
+            <input id="saveBtn" class="btn green" type="submit" value="save result">
+          </div>  </form>
+      </div>
+    </main>
+
+    <!-- Footer Contents -->
+    <footer>
+      <span>Covid-19 Detection form Chest X-Ray</span>
+      <span>&copy; Copyright 2021</span>
+      <span>Note : This is a Static Version of the App</span>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

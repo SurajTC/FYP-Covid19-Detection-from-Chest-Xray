@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <title>Login</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/resources/RemixIcons/remixicon.css" />
+    <link rel="stylesheet" href="static/css/main.min.css" />
+    <link rel="shortcut icon" href="static/resources/favicon.ico">
+
+  </head>
+  <body>
+    <!-- HEADER/TOP NAVBAR -->
+
+    <!-- Messages -->
+
+    <!-- Main Page Contents  -->
+    <main class="loginLayout">
+      <div class="loginhead">
+        <h2>Welcome</h2>
+        <h3><i class="ri-time-line"></i> <span id="clockTime">11:30:21</span></h3>
+      </div>
+      <div class="form">
+        <div class="form__login">
+          <span>Please Login</span>
+          <form id="login_form" action="home.html" onsubmit="return login(this)" method="POST">
+            <input 
+              class="textbox"
+              type="text"
+              name="username"
+              placeholder="Enter Username"
+              value="root"
+              required
+            /><br />
+            <input 
+              class="textbox"
+              type="password"
+              name="password"
+              placeholder="Enter password"
+              value="root"
+              required
+            /><br />
+            <a href="javascript:forgot()">Forgot Password ?</a>
+            <div class="chin">
+              <p></p>
+              <input  class="btn blue" type="submit" value="Login" />
+            </div>
+          </form>
+        </div>
+  
+        <div class="form__signup">
+          <span>Please signup</span>
+          <form action="" onsubmit="return signup(this)">
+            <input class="textbox" type="text" name="username" placeholder="Enter new username" required/>
+            <input class="textbox" type="email" name="email" placeholder="Enter Email ID" required/>
+            <input class="textbox"
+              type="password"
+              name="nwpassword"
+              placeholder="Enter new Password"
+              required
+            />
+            <input class="textbox"
+              type="password"
+              name="repassword"
+              placeholder="re-enter new Password"
+              required
+            />
+            <div class="chin">
+              <p></p>
+              <input class="btn green disabled" type="submit" value="signup" disabled/>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+    </main>
+
+    <!-- Footer Contents -->
+    <footer>
+      <span>Batch-5 Project</span>
+      <span>&copy; Copyright 2021</span>
+      <span>Note : This is a Static Version of the App</span>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Manage</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/resources/RemixIcons/remixicon.css" />
+    <link rel="stylesheet" href="static/css/main.min.css" />
+    <link rel="shortcut icon" href="static/resources/favicon.ico">
+
+  </head>
+  <body>
+    <!-- HEADER/TOP NAVBAR -->
+
+    <header>
+      <nav class="navbar">
+        <section class="navbar__left">
+          <a id="home" href="home.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-home-line icon__line"></i>
+              <i class="ri-home-fill icon__fill"></i>
+            </div>
+            <span>Home</span>
+          </a>
+          <a id="explore" href="explore.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-folder-2-line icon__line"></i>
+              <i class="ri-folder-2-fill icon__fill"></i>
+            </div>
+            <span>Explore</span>
+          </a>
+          <a id="predict" href="predict.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-flask-line icon__line"></i>
+              <i class="ri-flask-fill icon__fill"></i>
+            </div>
+            <span>Predict</span>
+          </a>
+          <a id="manage" href="manage.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-shield-user-line icon__line"></i>
+              <i class="ri-shield-user-fill icon__fill"></i>
+            </div>
+            <span>Manage</span>
+          </a>
+        </section>
+
+        <section class="navbar__right">
+          <a id="dashboard" href="dashboard.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-settings-line icon__line"></i>
+              <i class="ri-settings-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="#" class="navbar__right__item">
+            <div id="message" class="icon">
+              <i class="ri-notification-line icon__line"></i>
+              <i class="ri-notification-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="index.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-shut-down-line icon__line"></i>
+              <i class="ri-shut-down-fill icon__fill"></i>
+            </div>
+          </a>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Messages -->
+
+    <div id="messages" class="messages">
+      <div class="messages__item">
+        <h3>Root</h3>
+        <a href="#"><i class="ri-close-fill"></i></a>
+        
+        <span>12 June 2021, 09:05</span>
+        <p>
+          The Notification Message Appears Here
+        </p>
+      </div>
+
+      <div class="messages__item">
+        <h3>Guest User</h3>
+        <!-- <a href="javascript:postDelete({{user.id}})"><i class="ri-close-fill"></i></a> -->
+        
+        <span>27 May 2021, 18:32</span>
+        <p>
+          This is a Demo Message
+        </p>
+      </div>
+    
+      <h4>No more Messages to display</h4>
+    
+    </div>
+
+
+    <!-- Main Page Contents  -->
+    <main class="manageLayout">
+      <div class="manageLayout__request">
+        <h2>Requests</h2>
+        <div class="container">
+
+          <form class="container__card" action="/manage/add/{{request.id}}" method="POST">
+            <h4>User1</h4>
+            <input type="checkbox" name="admin" id="admin1" />
+            <label for="admin1">admin</label>
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Approve" />
+              <br>
+              <input class="btn blue" type="button" value="Deny" />
+            </div>
+          </form>
+        
+          <form class="container__card" action="/manage/add/{{request.id}}" method="POST">
+            <h4>User2</h4>
+            <input type="checkbox" name="admin" id="admin2" />
+            <label for="admin2">admin</label>
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Approve" />
+              <br>
+              <input class="btn blue" type="button" value="Deny" />
+            </div>
+          </form>
+
+          <form class="container__card" action="/manage/add/{{request.id}}" method="POST">
+            <h4>User3</h4>
+            <input type="checkbox" name="admin" id="admin3" />
+            <label for="admin3">admin</label>
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Approve" />
+              <br>
+              <input class="btn blue" type="button" value="Deny" />
+            </div>
+          </form>
+
+          <form class="container__card" action="/manage/add/{{request.id}}" method="POST">
+            <h4>User4</h4>
+            <input type="checkbox" name="admin" id="admin4" />
+            <label for="admin4">admin</label>
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Approve" />
+              <br>
+              <input class="btn blue" type="button" value="Deny" />
+            </div>
+          </form>
+
+          <form class="container__card" action="/manage/add/{{request.id}}" method="POST">
+            <h4>User5</h4>
+            <input type="checkbox" name="admin" id="admin5" />
+            <label for="admin5">admin</label>
+            <div class="btn-grp">
+              <input class="btn green" type="button" value="Approve" />
+              <br>
+              <input class="btn blue" type="button" value="Deny" />
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+      <div class="manageLayout__user">
+        <h2>Active Users</h2>
+        <div class="container">
+
+          <form class="container__user" action="/manage/update/{{user.id}}" method="POST">
+            <div>
+              <h4>Administrator</h4>
+              <p>20 June 2021, 18:32:11</p>
+            </div>
+            <div>
+              <input type="radio" name="role" id="user1" value="1" checked>
+              <label for="user1">Admin</label><br>
+              <input type="radio" name="role" id="useradmin1" value="0">
+              <label for="useradmin1">User</label>
+            </div> 
+            
+            <div>
+              <input class="btn green" type="button" value="update"><br>
+              <input class="btn blue" type="button" value="remove">
+            </div>
+          </form>
+
+          <form class="container__user" action="/manage/update/{{user.id}}" method="POST">
+            <div>
+              <h4>Guest User</h4>
+              <p>28 May 2021, 21:28:38</p>
+            </div>
+            <div>
+              <input type="radio" name="role" id="user2" value="1" >
+              <label for="user2">Admin</label><br>
+              <input type="radio" name="role" id="useradmin2" value="0" checked>
+              <label for="useradmin2">User</label>
+            </div> 
+            
+            <div>
+              <input class="btn green" type="button" value="update"><br>
+              <input class="btn blue" type="button" value="remove">
+            </div>
+          </form>
+        </div>
+  
+      </div>
+    </main>
+
+    <!-- Footer Contents -->
+    <footer>
+      <span>Covid-19 Detection form Chest X-Ray</span>
+      <span>&copy; Copyright 2021</span>
+      <span>Note : This is a Static Version of the App</span>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

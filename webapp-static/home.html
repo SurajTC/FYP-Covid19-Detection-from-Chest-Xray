@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/resources/RemixIcons/remixicon.css" />
+    <link rel="stylesheet" href="static/css/main.min.css" />
+    <link rel="shortcut icon" href="static/resources/favicon.ico">
+
+  </head>
+  <body>
+    <!-- HEADER/TOP NAVBAR -->
+
+    <header>
+      <nav class="navbar">
+        <section class="navbar__left">
+          <a id="home" href="home.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-home-line icon__line"></i>
+              <i class="ri-home-fill icon__fill"></i>
+            </div>
+            <span>Home</span>
+          </a>
+          <a id="explore" href="explore.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-folder-2-line icon__line"></i>
+              <i class="ri-folder-2-fill icon__fill"></i>
+            </div>
+            <span>Explore</span>
+          </a>
+          <a id="predict" href="predict.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-flask-line icon__line"></i>
+              <i class="ri-flask-fill icon__fill"></i>
+            </div>
+            <span>Predict</span>
+          </a>
+          <a id="manage" href="manage.html" class="navbar__left__item">
+            <div class="icon">
+              <i class="ri-shield-user-line icon__line"></i>
+              <i class="ri-shield-user-fill icon__fill"></i>
+            </div>
+            <span>Manage</span>
+          </a>
+        </section>
+
+        <section class="navbar__right">
+          <a id="dashboard" href="dashboard.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-settings-line icon__line"></i>
+              <i class="ri-settings-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="#" class="navbar__right__item">
+            <div id="message" class="icon">
+              <i class="ri-notification-line icon__line"></i>
+              <i class="ri-notification-fill icon__fill"></i>
+            </div>
+          </a>
+          <a href="index.html" class="navbar__right__item">
+            <div class="icon">
+              <i class="ri-shut-down-line icon__line"></i>
+              <i class="ri-shut-down-fill icon__fill"></i>
+            </div>
+          </a>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Messages -->
+
+    <div id="messages" class="messages">
+      <div class="messages__item">
+        <h3>Root</h3>
+        <a href="#"><i class="ri-close-fill"></i></a>
+        
+        <span>12 June 2021, 09:05</span>
+        <p>
+          The Notification Message Appears Here
+        </p>
+      </div>
+
+      <div class="messages__item">
+        <h3>Guest User</h3>
+        <!-- <a href="javascript:postDelete({{user.id}})"><i class="ri-close-fill"></i></a> -->
+        
+        <span>27 May 2021, 18:32</span>
+        <p>
+          This is a Demo Message
+        </p>
+      </div>
+    
+      <h4>No more Messages to display</h4>
+    
+    </div>
+
+
+    <!-- Main Page Contents  -->
+    <main class="homeLayout">
+      <section id="page1" class="homeLayout__page">
+          <div class="homeLayout__page__contents page1-contents">
+            <h1>Coronavirus (COVID-19)</h1>
+            <p>Coronavirus disease (COVID-19) is an infectious disease caused by a
+              newly discovered coronavirus.</p>
+            <p>
+              Most people infected with the COVID-19
+              virus will experience mild to moderate respiratory illness and
+              recover without requiring special treatment. Older people, and those
+              with underlying medical problems like cardiovascular disease,
+              diabetes, chronic respiratory disease, and cancer are more likely to
+              develop serious illness.
+            </p>
+            <p>
+              The best way to prevent and slow down
+              transmission is to be well informed about the COVID-19 virus, the
+              disease it causes and how it spreads. Protect yourself and others
+              from infection by washing your hands or using an alcohol based rub
+              frequently and not touching your face.
+            </p>
+  
+            <p>
+              The COVID-19 virus spreads
+              primarily through droplets of saliva or discharge from the nose when
+              an infected person coughs or sneezes, so it’s important that you
+              also practice respiratory etiquette (for example, by coughing into a
+              flexed elbow)
+            </p>
+            
+            <table>
+              <tr>
+                <td><span class="material-icons">wash</span></td>
+                <td><span class="material-icons">masks</span></td>
+                <td><span class="material-icons">social_distance</span></td>
+              </tr>
+  
+            <tr>
+              <td>Stay Hygiene</td>
+              <td>Wear Masks</td>
+              <td>Social Distancing</td>
+            </tr>
+          </table>
+          <h1>Statistics - India <span class="warn">( This is not realtime )</span> </h1>
+            <div id="statistics" class="statistics">
+              
+              <div class="statistics__group">
+                <div class="statistics__group__card">
+                  <h6 class="head">Total Cases</h6>
+                  <p class="number">32,117,826</p>
+                </div>
+  
+                <div class="statistics__group__card">
+                  <h6 class="head">Recovered</h6>
+                  <p class="number">31,302,345</p>
+                </div>
+              </div>
+              <div class="statistics__group">
+                <div class="statistics__group__card">
+                  <h6 class="head">Total Deaths</h6>
+                  <p class="number">430,285</p>
+                </div>
+  
+                <div class="statistics__group__card">
+                  <h6 class="head">Active Cases</h6>
+                  <p class="number">385,196</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="homeLayout__page__graphics">
+            <div class="hero">
+              <img class="hero__bg" src="static/resources/Hero/covid_bg.svg" alt="aa" />
+              <img class="hero__fg" src="static/resources/Hero/covid_fg.svg" alt="aa" />
+            </div>
+          </div>
+        </section>
+        <section id="page2" class="homeLayout__page">
+          <div class="homeLayout__page__graphics">
+            <div class="hero">
+              <img class="hero__bg" src="static/resources/Hero/work_bg.svg" alt="aa" />
+              <img class="hero__fg" src="static/resources/Hero/work_fg.svg" alt="aa" />
+            </div>
+          </div>
+          <div class="homeLayout__page__contents page2-contents">
+            <h1>About the Project</h1>
+            <ul>
+              <li>
+                The sudden spike in the number of patients with COVID-19, a new
+                respiratory virus, has put unprecedented load over healthcare
+                systems across the world.
+              </li>
+              <li>
+                The early and automatic diagnosis of Covid-19 may be beneficial
+                for countries for timely referral of the patients to quarantine,
+                rapid intubation of serious cases in specialized hospitals, and
+                monitoring of the spread of the disease.
+              </li>
+            </ul>
+            <p>
+              We propose the use of Chest X-Ray to detect COVID-19 infection in
+              the patients by identifying possible patterns that may lead to the
+              automatic diagnosis of the disease.
+            </p>
+            <p>
+              Developing a Computer Aided Detection (CAD) tool which uses a deep
+              neural network based model for highly accurate detection of COVID-19
+              infection from the chest X-Ray images of the patients.
+            </p>
+            <p>
+              It takes a chest X-Ray Image as input and outputs a prediction among
+              two classes:
+              <ul>
+                <li>Normal/COVID-19 negative</li>
+                <li>COVID-19 Positive </li>
+              </ul>
+            </p>
+  
+            <div class="btn-grp">
+              <p>Click Here for Demonstration</p>
+              <a href="predict.html"><input class="btn blue" type="button" value="Predict">
+              </a>
+              <a href="explore.html"><input class="btn green" type="button" value="Explore">
+              </a>
+              </div>
+          </div>
+        </section>
+    </main>
+
+    <!-- Footer Contents -->
+    <footer>
+      <span>Covid-19 Detection form Chest X-Ray</span>
+      <span>&copy; Copyright 2021</span>
+      <span>Note : This is a Static Version of the App</span>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
