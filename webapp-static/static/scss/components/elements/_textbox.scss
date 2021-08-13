@@ -1,0 +1,31 @@
+.textbox {
+  background-color: $clr_bg_d;
+  border-style: none;
+  outline: none;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 0.4rem;
+  border: 2px solid $clr_fg_d;
+  font-size: 1rem;
+  text-align: right;
+  color: lighten($clr_fg_l, 20%);
+
+  &::placeholder {
+    color: $clr_fg_l;
+    text-align: left;
+  }
+
+  &:hover {
+    border-color: lighten($clr_fg_l, 17.5%);
+  }
+
+  &:focus {
+    filter: drop-shadow(0px 4px 6px rgba($clr_black, 0.8));
+    border-color: $clr_ac;
+    color: $clr_ac;
+    &:nth-of-type(even) {
+      border-color: $clr_hl;
+      color: $clr_hl;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+
+footer{
+    
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: flex-end;
+    bottom: 0;
+    background-color: $clr_bg_d;
+
+    span{
+        margin: .25rem .5rem;
+    }
+    span:nth-of-type(3){
+        color: $clr_ex1;
+
+        animation: blink 2000ms ease-in-out  infinite;
+        @keyframes blink {
+          from{
+            opacity: 1;
+          }
+          25%{
+            opacity: 1;
+          }
+          50%{
+            opacity: .05;
+          }
+          to{
+            opacity: 1;
+          }
+          
+        }
+    }
+
+    &::before{
+        position: absolute;
+        content: '';
+        top: -.125rem;
+        left: 0;
+        right: 0;
+        height: 0.125rem;
+        background: $clr_grad50;
+    }
+}

@@ -1,0 +1,44 @@
+.btn {
+  cursor: pointer;
+
+  transition: filter 400ms ease-in-out, color 400ms ease-in,
+    border 400ms ease-in, background-color 400ms ease-in,
+    transform 50ms ease-out;
+
+  width: 120px;
+  font-size: 1.25rem;
+  border-style: none;
+  background-color: transparent;
+  color: $clr_fg_l;
+  border: 2px solid;
+  border-color: $clr_fg_d;
+  padding: 0.5rem 0;
+  border-radius: 0.4rem;
+
+  &:hover {
+    transition: filter 50ms ease-in-out, color 50ms ease-in,
+      border 400ms ease-in;
+
+    background-color: $clr_bg_l;
+    filter: drop-shadow(2px 2px 4px rgba($color: #000, $alpha: 0.5));
+  }
+  &:active {
+    transition: filter 50ms ease-out, transform 50ms ease-out,
+      background-color 50ms ease-out;
+
+    background-color: $clr_bg_d;
+    transform: scale(0.95);
+    filter: drop-shadow(2px 2px 2px rgba($color: #000, $alpha: 0.5));
+  }
+}
+
+.blue:hover{
+  color: $clr_hl;
+  border-color: $clr_hl;
+
+}
+.green:hover{
+  color: $clr_ac;
+  border-color: $clr_ac;
+
+}
