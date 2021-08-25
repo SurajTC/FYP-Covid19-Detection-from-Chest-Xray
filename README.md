@@ -1,6 +1,6 @@
 # <img alingn="left" alt="icon" width="32px" src="https://img.icons8.com/cotton/64/000000/coronavirus--v3.png"/> Covid-19 Detection form Chest X-Ray using Machine Learning
 
-Check out the static version of the app [here](https://surajtc.github.io/FYP-Covid19-Detection-from-Chest-Xray/) :snowflake:
+View the static version of the _**app** [here](https://surajtc.github.io/FYP-Covid19-Detection-from-Chest-Xray/)_:snowflake:
 
 ## Description
 
@@ -13,3 +13,12 @@ diagnosis. This takes a chest X-Ray Image as input and outputs a prediction amon
 * COVID-19 positive 
 
 using the novel Deep Neural Network based model.
+
+## Objectives
+
+* To design and develop a Covid-19 detection system which can help in quick and accurate results.
+* To establish an early screening model to distinguish Covid-19 infected and healthy cases.
+* To overcome the problem of lack of specialized physicians in remote villages.
+* To build a real time application useful for doctors, patients and the rest of the world.
+
+## Using this Project
