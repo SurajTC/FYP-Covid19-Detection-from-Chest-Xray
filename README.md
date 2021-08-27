@@ -56,7 +56,9 @@ Then follow the instructions on the console to run the webapp.
 
 ## Attribution
 
-Illustrations : <a href="https://storyset.com/people">Storyset</a> - People illustrations by Storyset
-Iconset : <a href="https://remixicon.com">Remix Icon</a> - Open source icon library
+Illustrations   : <a href="https://storyset.com/people">Storyset</a> - People illustrations by Storyset
+<br/>
+Iconset         : <a href="https://remixicon.com">Remix Icon</a> - Open source icon library
+<br/>
 Live Statistics : <a href="https://www.worldometers.info">Worldometer</a> - Real time world statistics
 
