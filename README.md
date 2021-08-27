@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
-Then follow the instructions on the console to run the webapp.
+Further follow the instructions on the console to use the webapp.
 
 ## Attribution
 
