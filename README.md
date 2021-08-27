@@ -22,3 +22,10 @@ using the novel Deep Neural Network based model.
 * To build a real time application useful for doctors, patients and the rest of the world.
 
 ## Using this Project
+
+**Installing Dependencies**
+
+Using Anaconda :
+
+Using Pip :
+
