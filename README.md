@@ -2,6 +2,14 @@
 
 :snowflake: View the static version of the _**app** [here](https://surajtc.github.io/FYP-Covid19-Detection-from-Chest-Xray/)_ :snowflake:
 
+## Index
+
+* [Description](#Description)
+* [Objectives](#Objectives)
+* [Usage](#Usage)
+
+---
+
 ## Description
 
 This is a Computer Aided Detection (CAD) tool for iterative Covid-19 detection,
@@ -21,16 +29,16 @@ using the novel Deep Neural Network based model.
 * To overcome the problem of lack of specialized physicians in remote villages.
 * To build a real time application useful for doctors, patients and the rest of the world.
 
-## Using this Project
+## Usage
 
-**1.Cloning the Repository :octocat:**
+**1.Cloning the Repository**
 ```
 git clone https://github.com/SurajTC/FYP-Covid19-Detection-from-Chest-Xray.git
 ```
 ```
 cd FYP-Covid19-Detection-from-Chest-Xray
 ```
-**2.Installing Dependencies :wrench:**
+**2.Installing Dependencies**
 
 Using Anaconda :
 
@@ -47,7 +55,7 @@ source myenv/bin/activate
 
 pip install -r requirements.txt
 ```
-**3.Starting the Flask server :large_blue_circle:**
+**3.Starting the Flask server**
 
 ```
 python app.py
