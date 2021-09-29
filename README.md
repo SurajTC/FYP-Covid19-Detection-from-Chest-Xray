@@ -34,33 +34,31 @@ using the novel Deep Neural Network based model.
 
 ## Usage
 
-**1.Cloning the Repository**
-```
-git clone https://github.com/SurajTC/FYP-Covid19-Detection-from-Chest-Xray.git
-```
-```
+**1.Clone this Repository**
+```shell
+git clone https://github.com/SurajTC/FYP-Covid19-Detection-from-Chest-Xray.git;
 cd FYP-Covid19-Detection-from-Chest-Xray
 ```
-**2.Installing Dependencies**
+**2.Satisfy Dependencies**
 
 Using Anaconda :
 
-```
+```shell
 conda env create --name myenv --file=environment.yml
 
 conda activate myenv
 ```
 
 Using Pip :
-```
+```shell
 python -m venv myenv
 source myenv/bin/activate
 
 pip install -r requirements.txt
 ```
-**3.Starting the Flask server**
+**3.Start the Flask server**
 
-```
+```shell
 python app.py
 ```
 Further follow the instructions on the console to use the webapp.
